@@ -1,16 +1,16 @@
 {
-    "identifier": "cc.aeron.nova-black",
-    "name": "Black",
-    "organization": "Aeron",
-    "description": "Black, the uncompromising Python code formatter, for Nova.",
-    "version": "1.0.1",
+    "identifier": "uk.eskola.shfmt",
+    "name": "Shfmt",
+    "organization": "Benjamin Eskola",
+    "description": "Shfmt for Nova.",
+    "version": "0.1.0",
     "categories": ["formatters", "commands"],
-    "repository": "https://github.com/Aeron/Black.novaextension",
-    "bugs": "https://github.com/Aeron/Black.novaextension/issues",
+    "repository": "https://github.com/benjamineskola/Shfmt.novaextension",
+    "bugs": "https://github.com/benjamineskola/Shfmt.novaextension/issues",
     "license": "Apache-2.0",
     "main": "main.js",
     "activationEvents": [
-        "onLanguage:python"
+        "onLanguage:shell"
     ],
     "entitlements": {
         "process": true
@@ -18,32 +18,32 @@
     "commands": {
         "editor": [
             {
-                "title": "Format with Black",
-                "command": "formatWithBlack",
-                "shortcut": "cmd-shift-B",
+                "title": "Format with Shfmt",
+                "command": "formatWithShfmt",
+                "shortcut": "cmd-shift-F",
                 "filters": {
-                    "syntaxes": ["python"]
+                    "syntaxes": ["shell"]
                 }
             }
         ]
     },
     "config": [
         {
-            "key": "cc.aeron.nova-black.executablePath",
+            "key": "uk.eskola.shfmt.executablePath",
             "title": "Executable Path",
-            "description": "Path to the Black executable.",
+            "description": "Path to the Shfmt executable.",
             "type": "path",
-            "default": "/usr/local/bin/black"
+            "default": "/usr/local/bin/shfmt"
         },
         {
-            "key": "cc.aeron.nova-black.commandArguments",
+            "key": "uk.eskola.shfmt.commandArguments",
             "title": "Command Arguments",
-            "description": "Additional arguments. The --quiet option always set.",
+            "description": "Additional arguments.",
             "type": "string",
             "default": null
         },
         {
-            "key": "cc.aeron.nova-black.formatOnSave",
+            "key": "uk.eskola.shfmt.formatOnSave",
             "title": "Format on a file save",
             "type": "boolean",
             "default": true
@@ -51,20 +51,20 @@
     ],
     "configWorkspace": [
         {
-            "key": "cc.aeron.nova-black.executablePath",
+            "key": "uk.eskola.shfmt.executablePath",
             "title": "Executable Path",
-            "description": "Path to the Black executable.",
+            "description": "Path to the Shfmt executable.",
             "type": "path",
-            "placeholder": "/usr/local/bin/black"
+            "placeholder": "/usr/local/bin/shfmt"
         },
         {
-            "key": "cc.aeron.nova-black.commandArguments",
+            "key": "uk.eskola.shfmt.commandArguments",
             "title": "Command Arguments",
-            "description": "Additional arguments. The --quiet option always set.",
+            "description": "Additional arguments.",
             "type": "string"
         },
         {
-            "key": "cc.aeron.nova-black.formatOnSave",
+            "key": "uk.eskola.shfmt.formatOnSave",
             "title": "Format on a file save",
             "type": "boolean",
             "default": true

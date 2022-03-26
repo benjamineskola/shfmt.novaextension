@@ -1,33 +1,31 @@
-# Black Nova Extension
+# Shfmt Nova Extension
 
-It’s a stand-alone Nova extension to use [Black](https://github.com/psf/black),
-the uncompromising Python code formatter.
+It’s a stand-alone Nova extension to use [Shfmt](https://github.com/mvdan/sh),
+based on [Aeron](https://github.com/Aeron/)'s
+[Black extension](https://github.com/Aeron/Black.novaextension).
 
 ## Requirements
 
-Before using the extension, it’s necessary to install Black itself if you don’t have
-one already.
+Before using the extension, it’s necessary to install Shfmt itself if you
+haven't already.
 
-Black can be installed simply by running `pip install black`.
+Shfmt can be installed simply by running `brew install shfmt`.
 
 ## Configuration
 
-The extension supports both global and workspace configurations.
-A workspace configuration always overrides a global one.
+The extension supports both global and workspace configurations. A workspace
+configuration always overrides a global one.
 
 ### Options
 
-There are three options available to configure: executable path, command arguments,
-and format on save. By default, the executable path is `/usr/local/bin/black`, with no
-additional arguments, and formatting on saving is on.
+There are three extension options available to configure: executable path,
+command arguments, and format on save. By default, the executable path is
+`/usr/local/bin/shfmt`, with no additional arguments, and formatting on saving
+is on.
 
-You could alter the executable path if Black installed in a different place
-or if `/usr/bin/env` usage is desirable.
+There are also a number of formatting options to configure: indentation size,
+POSIX compatibility, and simplification mode. All of these default to the Shfmt
+defaults: tab indentation, Bash compatibility, no simplification.
 
-In the case of `/usr/bin/env`, it becomes the executable path, and `black` becomes
-the first argument.
-
-### pyproject.toml
-
-Also, the extension respects `pyproject.toml` in a project directory. So, there’s no
-need to specify the `--config` argument explicitly.
+Other options can be set using the command arguments option, which will override
+the others in case of a conflict.

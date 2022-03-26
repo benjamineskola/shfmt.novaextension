@@ -10,9 +10,9 @@ exports.activate = function() {
     console.info("Format on save: " + config.get("formatOnSave"));
 
     nova.workspace.onDidAddTextEditor((editor) => {
-        if (editor.document.syntax !== "python") return;
+        if (editor.document.syntax !== "shell") return;
         editor.onWillSave(formatter.getPromiseToFormat, formatter);
     });
 
-    nova.commands.register("formatWithBlack", formatter.format, formatter);
+    nova.commands.register("formatWithShfmt", formatter.format, formatter);
 };

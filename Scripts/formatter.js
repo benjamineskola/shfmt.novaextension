@@ -6,7 +6,7 @@ class Formatter {
     async getProcess() {
         const executablePath = this.config.get("executablePath");
         const commandArguments = this.config.get("commandArguments");
-        const defaultOptions = ["--quiet", "-"];
+        const defaultOptions = ["-"];
 
         var options = [];
 
