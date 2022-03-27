@@ -3,7 +3,7 @@
   "name": "Shfmt",
   "organization": "Benjamin Eskola",
   "description": "Automatic formatting of shell scripts with shfmt.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "categories": ["formatters", "commands"],
   "repository": "https://github.com/benjamineskola/Shfmt.novaextension",
   "bugs": "https://github.com/benjamineskola/Shfmt.novaextension/issues",
@@ -31,7 +31,8 @@
       "title": "Executable Path",
       "description": "Path to the Shfmt executable.",
       "type": "path",
-      "default": "/usr/local/bin/shfmt"
+      "placeholder": "/usr/local/bin/shfmt",
+      "default": ""
     },
     {
       "key": "uk.eskola.shfmt.commandArguments",
@@ -71,7 +72,8 @@
       "title": "Executable Path",
       "description": "Path to the Shfmt executable.",
       "type": "path",
-      "placeholder": "/usr/local/bin/shfmt"
+      "placeholder": "/usr/local/bin/shfmt",
+      "default": ""
     },
     {
       "key": "uk.eskola.shfmt.commandArguments",

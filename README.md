@@ -19,9 +19,8 @@ configuration always overrides a global one.
 ### Options
 
 There are three extension options available to configure: executable path,
-command arguments, and format on save. By default, the executable path is
-`/usr/local/bin/shfmt`, with no additional arguments, and formatting on saving
-is on.
+command arguments, and format on save. By default, the executable is searched
+for in the PATH, with no additional arguments, and formatting on saving is on.
 
 There are also a number of formatting options to configure: indentation size,
 POSIX compatibility, and simplification mode. All of these default to the Shfmt

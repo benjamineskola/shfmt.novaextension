@@ -4,7 +4,7 @@ class Formatter {
   }
 
   async getProcess() {
-    const executablePath = this.config.get("executablePath")
+    const executablePath = this.config.get("executablePath") === "" ? "shfmt" : this.config.get("executablePath")
     const commandArguments = this.config.get("commandArguments")
     const indentation = this.config.get("indentation")
     const posix = this.config.get("posix")
@@ -37,6 +37,7 @@ class Formatter {
       args: Array.from(new Set(options)),
       stdio: "pipe",
       cwd: nova.workspace.path, // NOTE: must be explicitly set
+      shell: true
     })
   }
 
