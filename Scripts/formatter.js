@@ -8,6 +8,7 @@ class Formatter {
     const commandArguments = this.config.get("commandArguments")
     const indentation = this.config.get("indentation")
     const posix = this.config.get("posix")
+    const simplify = this.config.get("simplify")
     const defaultOptions = ["-"]
 
     var options = []
@@ -25,6 +26,9 @@ class Formatter {
     }
     if (posix === true && options.indexOf("-ln") == -1) {
       options = options.concat(["-p"])
+    }
+    if (simplify === true) {
+      options = options.concat(["-s"])
     }
 
     options = [...options, ...defaultOptions].filter((option) => option !== "")

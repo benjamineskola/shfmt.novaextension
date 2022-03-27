@@ -57,6 +57,12 @@
       "title": "POSIX mode",
       "type": "boolean",
       "default": false
+    },
+    {
+      "key": "uk.eskola.shfmt.simplify",
+      "title": "Simplify the code",
+      "type": "boolean",
+      "default": false
     }
   ],
   "configWorkspace": [
@@ -88,6 +94,12 @@
     {
       "key": "uk.eskola.shfmt.posix",
       "title": "POSIX mode",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "key": "uk.eskola.shfmt.simplify",
+      "title": "Simplify the code",
       "type": "boolean",
       "default": false
     }
