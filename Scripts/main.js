@@ -1,18 +1,18 @@
-const Config = require("./Config");
-const Formatter = require("./Formatter");
+const Config = require("./Config")
+const Formatter = require("./Formatter")
 
-exports.activate = function() {
-    const config = new Config();
-    const formatter = new Formatter(config);
+exports.activate = function () {
+  const config = new Config()
+  const formatter = new Formatter(config)
 
-    console.info("Executable path: " + config.get("executablePath"));
-    console.info("Command arguments: " + config.get("commandArguments"));
-    console.info("Format on save: " + config.get("formatOnSave"));
+  console.info("Executable path: " + config.get("executablePath"))
+  console.info("Command arguments: " + config.get("commandArguments"))
+  console.info("Format on save: " + config.get("formatOnSave"))
 
-    nova.workspace.onDidAddTextEditor((editor) => {
-        if (editor.document.syntax !== "shell") return;
-        editor.onWillSave(formatter.getPromiseToFormat, formatter);
-    });
+  nova.workspace.onDidAddTextEditor((editor) => {
+    if (editor.document.syntax !== "shell") return
+    editor.onWillSave(formatter.getPromiseToFormat, formatter)
+  })
 
-    nova.commands.register("formatWithShfmt", formatter.format, formatter);
-};
+  nova.commands.register("formatWithShfmt", formatter.format, formatter)
+}

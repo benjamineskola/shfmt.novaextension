@@ -1,97 +1,95 @@
 {
-    "identifier": "uk.eskola.shfmt",
-    "name": "Shfmt",
-    "organization": "Benjamin Eskola",
-    "description": "Shfmt for Nova.",
-    "version": "0.1.0",
-    "categories": ["formatters", "commands"],
-    "repository": "https://github.com/benjamineskola/Shfmt.novaextension",
-    "bugs": "https://github.com/benjamineskola/Shfmt.novaextension/issues",
-    "license": "Apache-2.0",
-    "main": "main.js",
-    "activationEvents": [
-        "onLanguage:shell"
-    ],
-    "entitlements": {
-        "process": true
-    },
-    "commands": {
-        "editor": [
-            {
-                "title": "Format with Shfmt",
-                "command": "formatWithShfmt",
-                "shortcut": "cmd-shift-F",
-                "filters": {
-                    "syntaxes": ["shell"]
-                }
-            }
-        ]
-    },
-    "config": [
-        {
-            "key": "uk.eskola.shfmt.executablePath",
-            "title": "Executable Path",
-            "description": "Path to the Shfmt executable.",
-            "type": "path",
-            "default": "/usr/local/bin/shfmt"
-        },
-        {
-            "key": "uk.eskola.shfmt.commandArguments",
-            "title": "Command Arguments",
-            "description": "Additional arguments.",
-            "type": "string",
-            "default": null
-        },
-        {
-            "key": "uk.eskola.shfmt.formatOnSave",
-            "title": "Format on a file save",
-            "type": "boolean",
-            "default": true
-        },
-        {
-            "key": "uk.eskola.shfmt.indentation",
-            "title": "Indentation amount (blank for tabs)",
-            "type": "number",
-            "default": null
-        },
-        {
-            "key": "uk.eskola.shfmt.posix",
-            "title": "POSIX mode",
-            "type": "boolean",
-            "default": false
+  "identifier": "uk.eskola.shfmt",
+  "name": "Shfmt",
+  "organization": "Benjamin Eskola",
+  "description": "Shfmt for Nova.",
+  "version": "0.1.0",
+  "categories": ["formatters", "commands"],
+  "repository": "https://github.com/benjamineskola/Shfmt.novaextension",
+  "bugs": "https://github.com/benjamineskola/Shfmt.novaextension/issues",
+  "license": "Apache-2.0",
+  "main": "main.js",
+  "activationEvents": ["onLanguage:shell"],
+  "entitlements": {
+    "process": true
+  },
+  "commands": {
+    "editor": [
+      {
+        "title": "Format with Shfmt",
+        "command": "formatWithShfmt",
+        "shortcut": "cmd-shift-F",
+        "filters": {
+          "syntaxes": ["shell"]
         }
-    ],
-    "configWorkspace": [
-        {
-            "key": "uk.eskola.shfmt.executablePath",
-            "title": "Executable Path",
-            "description": "Path to the Shfmt executable.",
-            "type": "path",
-            "placeholder": "/usr/local/bin/shfmt"
-        },
-        {
-            "key": "uk.eskola.shfmt.commandArguments",
-            "title": "Command Arguments",
-            "description": "Additional arguments.",
-            "type": "string"
-        },
-        {
-            "key": "uk.eskola.shfmt.formatOnSave",
-            "title": "Format on a file save",
-            "type": "boolean",
-            "default": true
-        },
-        {
-            "key": "uk.eskola.shfmt.indentation",
-            "title": "Indentation amount (blank for tabs)",
-            "type": "number",
-            "default": null
-        },
-        {
-            "key": "uk.eskola.shfmt.posix",
-            "title": "POSIX mode",
-            "type": "boolean",
-            "default": false
-        }
+      }
     ]
+  },
+  "config": [
+    {
+      "key": "uk.eskola.shfmt.executablePath",
+      "title": "Executable Path",
+      "description": "Path to the Shfmt executable.",
+      "type": "path",
+      "default": "/usr/local/bin/shfmt"
+    },
+    {
+      "key": "uk.eskola.shfmt.commandArguments",
+      "title": "Command Arguments",
+      "description": "Additional arguments.",
+      "type": "string",
+      "default": null
+    },
+    {
+      "key": "uk.eskola.shfmt.formatOnSave",
+      "title": "Format on a file save",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "uk.eskola.shfmt.indentation",
+      "title": "Indentation amount (blank for tabs)",
+      "type": "number",
+      "default": null
+    },
+    {
+      "key": "uk.eskola.shfmt.posix",
+      "title": "POSIX mode",
+      "type": "boolean",
+      "default": false
+    }
+  ],
+  "configWorkspace": [
+    {
+      "key": "uk.eskola.shfmt.executablePath",
+      "title": "Executable Path",
+      "description": "Path to the Shfmt executable.",
+      "type": "path",
+      "placeholder": "/usr/local/bin/shfmt"
+    },
+    {
+      "key": "uk.eskola.shfmt.commandArguments",
+      "title": "Command Arguments",
+      "description": "Additional arguments.",
+      "type": "string"
+    },
+    {
+      "key": "uk.eskola.shfmt.formatOnSave",
+      "title": "Format on a file save",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "key": "uk.eskola.shfmt.indentation",
+      "title": "Indentation amount (blank for tabs)",
+      "type": "number",
+      "default": null
+    },
+    {
+      "key": "uk.eskola.shfmt.posix",
+      "title": "POSIX mode",
+      "type": "boolean",
+      "default": false
+    }
+  ]
 }
