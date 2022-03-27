@@ -29,3 +29,12 @@ defaults: tab indentation, Bash compatibility, no simplification.
 
 Other options can be set using the command arguments option, which will override
 the others in case of a conflict.
+
+## Credits
+
+The bulk of the code is from [Aeron](https://github.com/Aeron/)'s
+[Black extension](https://github.com/Aeron/Black.novaextension). All I've done
+is swap out the executable for [Shfmt](https://github.com/mvdan/sh). The
+extension logo is from
+[nova-shellcheck](https://github.com/olly/nova-shellcheck) and is
+[MIT licenced](https://github.com/olly/nova-shellcheck/blob/main/LICENSE).
