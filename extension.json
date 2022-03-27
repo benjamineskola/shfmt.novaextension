@@ -2,7 +2,7 @@
   "identifier": "uk.eskola.shfmt",
   "name": "Shfmt",
   "organization": "Benjamin Eskola",
-  "description": "Shfmt for Nova.",
+  "description": "Automatic formatting of shell scripts with shfmt.",
   "version": "0.1.0",
   "categories": ["formatters", "commands"],
   "repository": "https://github.com/benjamineskola/Shfmt.novaextension",
