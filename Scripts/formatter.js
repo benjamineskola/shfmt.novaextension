@@ -6,6 +6,8 @@ class Formatter {
     async getProcess() {
         const executablePath = this.config.get("executablePath");
         const commandArguments = this.config.get("commandArguments");
+        const indentation = this.config.get("indentation");
+        const posix = this.config.get("posix");
         const defaultOptions = ["-"];
 
         var options = [];
@@ -16,6 +18,13 @@ class Formatter {
                 .split(" ")
                 .map((option) => option.trim())
                 .filter((option) => option !== " ");
+        }
+
+        if (indentation !== null && options.indexOf("-i") == -1) {
+            options = options.concat(["-i", indentation.toString()]);
+        }
+        if (posix === true && options.indexOf("-ln") == -1) {
+            options = options.concat(["-p"]);
         }
 
         options = [...options, ...defaultOptions].filter((option) => option !== "");

@@ -47,6 +47,18 @@
             "title": "Format on a file save",
             "type": "boolean",
             "default": true
+        },
+        {
+            "key": "uk.eskola.shfmt.indentation",
+            "title": "Indentation amount (blank for tabs)",
+            "type": "number",
+            "default": null
+        },
+        {
+            "key": "uk.eskola.shfmt.posix",
+            "title": "POSIX mode",
+            "type": "boolean",
+            "default": false
         }
     ],
     "configWorkspace": [
@@ -68,6 +80,18 @@
             "title": "Format on a file save",
             "type": "boolean",
             "default": true
+        },
+        {
+            "key": "uk.eskola.shfmt.indentation",
+            "title": "Indentation amount (blank for tabs)",
+            "type": "number",
+            "default": null
+        },
+        {
+            "key": "uk.eskola.shfmt.posix",
+            "title": "POSIX mode",
+            "type": "boolean",
+            "default": false
         }
     ]
 }
